@@ -1,40 +1,40 @@
-# 📌 Projeto de Classificação com K-Nearest Neighbors (KNN)
+# 📌 K-Nearest Neighbors (KNN) Classification Project
 
-## 📖 Sobre o Projeto
-Este projeto implementa um modelo de classificação utilizando o algoritmo **K-Nearest Neighbors (KNN)** para prever a presença de minas ou rochas com base em dados de ondas sonoras. A otimização do modelo foi realizada com **validação cruzada estratificada (StratifiedKFold)** e **Grid Search** para encontrar o melhor valor de `K`.
+## 📖 About the Project
+This project implements a classification model using the **K-Nearest Neighbors (KNN)** algorithm to predict the presence of mines or rocks based on sound wave data. The model optimization was done using **Stratified Cross-Validation (StratifiedKFold)** and **Grid Search** to find the best value for `K`.
 
-## 📊 Conjunto de Dados
-O dataset utilizado foi **Sonar All-Data**, que contém **60 atributos numéricos** extraídos de sinais acústicos. As classes alvo são:
-- **R (Rock)** → Representa rochas
-- **M (Mine)** → Representa minas
+## 📊 Dataset
+The dataset used was **Sonar All-Data**, which contains **60 numerical attributes** extracted from acoustic signals. The target classes are:
+- **R (Rock)** → Represents rocks
+- **M (Mine)** → Represents mines
 
-Para facilitar a modelagem, os rótulos foram convertidos para valores numéricos:
+To facilitate modeling, the labels were converted to numeric values:
 - `R` → `0`
 - `M` → `1`
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Technologies Used
 - Python
-- Pandas & NumPy (manipulação de dados)
-- Seaborn & Matplotlib (visualizações)
-- Scikit-learn (modelagem e validação)
+- Pandas & NumPy (data manipulation)
+- Seaborn & Matplotlib (visualizations)
+- Scikit-learn (modeling and validation)
 
-## 🚀 Implementação
-### 1️⃣ Pré-processamento dos dados
-- Carregamento do dataset
-- Conversão de rótulos para valores numéricos
-- Padronização das variáveis preditoras usando **StandardScaler**
-- Divisão em conjuntos de treino e teste (**90% treino / 10% teste**)
-- Verificação de desbalanceamento das classes
+## 🚀 Implementation
+### 1️⃣ Data Preprocessing
+- Loading the dataset
+- Converting labels to numeric values
+- Standardizing predictor variables using **StandardScaler**
+- Splitting into training and testing sets (**90% training / 10% testing**)
+- Checking for class imbalance
 
-### 2️⃣ Construção do Modelo
-- Utilização de **Pipeline** para aplicar a padronização e o modelo KNN
-- Busca do melhor valor de `K` através do **GridSearchCV**
-- Uso de **StratifiedKFold (k=5)** para garantir divisão equilibrada das classes
+### 2️⃣ Model Construction
+- Using **Pipeline** to apply standardization and the KNN model
+- Searching for the best value of `K` through **GridSearchCV**
+- Using **StratifiedKFold (k=5)** to ensure balanced class division
 
-### 3️⃣ Avaliação do Modelo
-- **Relatório de classificação (classification report)**
-- **Matriz de confusão com heatmap**
-- **Acurácia do modelo**
+### 3️⃣ Model Evaluation
+- **Classification report**
+- **Confusion matrix with heatmap**
+- **Model accuracy**
 
-## 📌 Resultados Obtidos
-O modelo apresentou um desempenho sólido na classificação das amostras, com um **melhor valor de `K` encontrado via Grid Search**. A matriz de confusão e as métricas de desempenho foram utilizadas para avaliar a eficácia do modelo.
+## 📌 Results
+The model showed solid performance in classifying samples, with the **best value for `K` found via Grid Search**. The confusion matrix and performance metrics were used to evaluate the model's effectiveness.
